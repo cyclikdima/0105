@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        function numberText(num){
+            let numbers = [
+                "", "один", "два", "три", "четыре", "пять",
+                "шесть", "семь", "восемь", "девять"
+            ];
+
+            let teens = [
+                "десять", "одиннадцать", "двенадцать", "тринадцать", "четырнадцать",
+                "пятнадцать", "шестнадцать", "семнадцать", "восемнадцать", "девятнадцать"
+            ];
+
+            let tens = [
+                "", "", "двадцать", "тридцать", "сорок",
+                "пятьдесят", "шестьдесят", "семьдесят", "восемьдесят", "девяносто"
+            ];
+
+            if (num < 1 || num > 99) {
+                return "Error"
+            }
+
+            if (num >= 10 && num < 20) {
+                return teens[num - 10]
+            }
+
+            if (num >= 1 && num < 10) {
+                    return numbers[num]
+            }
+
+            let ten = parseInt(num / 10)
+            let zufra = num % 10
+
+            return tens[ten] + (zufra !== 0 ? " " + numbers[zufra] : "")
+        }
+        let input = prompt()
+        let n = alert(numberText(input))
+    </script>
+</body>
+</html>

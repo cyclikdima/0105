@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function ToText(str, razdelitel) {
+            let result = [];
+            let word = '';
+            let index = 0;
+
+            for (let i = 0; i < str.length; i++) {
+                if (str[i] === razdelitel) {
+                    result[index] = word;  
+                    word = '';
+                    index++;  
+                } else {
+                    word += str[i];
+                }
+            }
+
+            result[index] = word;
+
+            return result;
+        }
+
+        let input = prompt("строка:");
+        let razdelitel = prompt("разделитель:");
+        let n = ToText(input, razdelitel);
+
+        for (let i = 0; i < n.length; i++) {
+            alert(n[i]);
+        }
+    </script>
+
+</body>
+</html>

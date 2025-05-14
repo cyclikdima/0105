@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let str = " 3Тут как5ой то т4.?екст ! 1 2 "
+
+        let ch = 0, digit = 0, other = 0;
+        for (let i = 0; i < str.length; i++) {
+            if (str[i] >= '0' && str[i] <= '9') {
+                digit++;
+            }
+            else if ((str[i] > 'А' && str[i] < 'Я') || (str[i] > 'а' && str[i] < 'я')) {
+                ch++;
+            }
+            else {
+                other++;
+            }
+
+        }
+        document.writeln(`Количество букв = ${ch.toString().fontcolor("red")} <br>`)
+        document.writeln(`Количество цифр = ${digit.toString().fontcolor("red")} <br>`)
+        document.writeln(`Количество других символов = ${other.toString().fontcolor("red")} <br>`)
+    </script>
+</body>
+</html>

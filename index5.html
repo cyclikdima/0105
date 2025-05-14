@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function ToText(text) {
+            let kysok = text.toLowerCase().split('-')
+            let result = kysok[0]
+
+            for (let i = 1; i < kysok.length; i++) {
+                let word = kysok[i];
+                result += word.charAt(0).toUpperCase() + word.slice(1)
+            }
+
+            return result;
+        }
+
+        let input = prompt("Введите фразу:")
+        let n = alert(ToText(input))
+    </script>
+
+</body>
+</html>

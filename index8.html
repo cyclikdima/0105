@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function ParseURL(url) {
+            
+            let u = new URL(url)
+
+            let protocol = u.protocol
+            let domen = u.hostname
+            let path = u.pathname
+
+            return `протокол: ${protocol}, домен: ${domen}, путь: ${path}`
+
+        }
+        let n = ParseURL("https://github.com/cyclikdima/dz1")
+    </script>
+
+
+</body>
+
+</html>
